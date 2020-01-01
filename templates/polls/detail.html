@@ -14,10 +14,11 @@
     {% for choice in question.choice_set.all %} 
     <div class="form-check"> 
         <input 
-        type="radio" 
+        type="radio"- 
         name="choice" 
         class="form-check-input" 
-        id="choice {{ forloop.counter }}" 
+        id="choice {{ forloop.counter }}"  
+        value="{{ forloop.counter }}"
         /> 
         <label for="choice {{ forloop.counter }}">{{ choice.choice_text }}</label>
     </div> 
